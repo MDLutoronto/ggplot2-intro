@@ -21,8 +21,8 @@ install.packages("ggplot2")
 library(ggplot2
 ```
 
-Example 1: Histogram of the Price of Diamonds
----------------------------------------------
+Example 1: Histogram
+--------------------
 
 ```
 data(diamonds)
@@ -32,7 +32,7 @@ ggplot(diamonds, aes(price)) + geom_histogram(binwidth=100) + theme_classic()
 ggplot(diamonds, aes(price)) + 
   geom_histogram(binwidth=100, fill="darkblue", color="lightblue") + 
   theme_classic() + 
-  ggtitle("Histogram of the Price of Diamonds") + 
+  ggtitle("Histogram of the Diamond Prices") + 
   theme(plot.title=element_text(size=20, hjust=0.5)) + 
   xlab("Price") + ylab("Count")
 ggsave("histogram1.png")
@@ -41,15 +41,15 @@ ggsave("histogram1.png")
 
  
 
-Example 2: Scatterplot of the Price and the Weight of Diamonds
---------------------------------------------------------------
+Example 2: Scatterplot
+----------------------
 
 ```
 ggplot(diamonds, aes(carat, price)) + geom_point()
 ggplot(diamonds, aes(carat, price, colour=clarity)) + 
   geom_point(shape="diamond filled") + 
   theme_light() + 
-  ggtitle("Relationship between the Price and the Weight of Diamonds")
+  ggtitle("Diamond Price by Carat and Clarity")
 ```
 
 ```
@@ -61,27 +61,42 @@ myscattercolours <- c("#7FFFD4", "#66CDAA", "#458B74", "#00FFFF", "#1C86EE", "#1
 ggplot(diamonds, aes(carat, price, colour=clarity)) + 
   geom_point(shape="diamond filled") + 
   theme_light() + 
-  ggtitle("Relationship between the Price and the Weight of Diamonds") + 
+  ggtitle("Diamond Price by Carat and Clarity") + 
   scale_colour_manual(values=myscattercolours) +
   xlab("Carat") + ylab("Price") + 
   guides(colour=guide_legend("Clarity"))
 ```
-![Scatterplot of the Price and the Weight of Diamonds]({{ '/assets/images/Example2.png' | relative_url }})
+![Scatterplot of the Price and the Weight of Diamonds]({{ '/assets/images/Example2a.png' | relative_url }})
 
- 
+```
+install.packages("RColorBrewer")
+library(RColorBrewer)
+```
 
-Example 3: Time Series of Median Unemployment Duration in Weeks
----------------------------------------------------------------
+```
+ggplot(diamonds, aes(carat, price, colour=clarity)) + 
+  geom_point(shape="diamond filled") + 
+  theme_light() + 
+  ggtitle("Diamond Price by Carat and Clarity") + 
+  scale_colour_brewer(palette="Blues") +
+  xlab("Carat") + ylab("Price") + 
+  guides(colour=guide_legend("Clarity"))
+```
+![Scatterplot of the Price and the Weight of Diamonds]({{ '/assets/images/Example2b.png' | relative_url }})
+
+
+Example 3: Time Series Line Graph
+---------------------------------
 
 ```
 data(economics)
 ggplot(economics, aes(x=date, y=uempmed)) +
   theme_minimal() +
   geom_line(colour="yellow3", linewidth=1) + 
-  labs(title="US Economic Time Series",
-       subtitle="Median Unemployment Duration vs Month of Data Collection") +
-  xlab("Month of Data Collection") +
-  ylab("Median Unemployment Duration in Weeks")
+  labs(title="US Unemployment Trends",
+       subtitle="Median unemployment duration in weeks, 1967–2015") +
+  xlab("Date") +
+  ylab("Median Duration (Weeks)")
 ```
 ![Time Series of Median Unemployment Duration in Weeks]({{ '/assets/images/Example3.png' | relative_url }})
 
