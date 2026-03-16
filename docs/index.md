@@ -13,16 +13,14 @@ This guide consists of 3 data visualization examples. You can download the code 
 
 Once you have gone over these examples and you feel confident about them, you can test your understanding by trying this [activity](https://maps.library.utoronto.ca/workshops/ggplot2/activity.php). If you have any questions, you can request for assistance by filling out our support request form [here](https://mdl.library.utoronto.ca/about/contact-form).
 
-Install package
----------------
+## Install package
 
 ```
 install.packages("ggplot2")
 library(ggplot2
 ```
 
-Example 1: Histogram
---------------------
+## Example 1: Histogram
 
 ```
 data(diamonds)
@@ -41,8 +39,7 @@ ggsave("histogram1.png")
 
  
 
-Example 2: Scatterplot
-----------------------
+## Example 2: Scatterplot
 
 ```
 ggplot(diamonds, aes(carat, price)) + geom_point()
@@ -85,8 +82,7 @@ ggplot(diamonds, aes(carat, price, colour=clarity)) +
 ![Scatterplot of the Price and the Weight of Diamonds]({{ '/assets/images/Example2b.png' | relative_url }})
 
 
-Example 3: Time Series Line Graph
----------------------------------
+## Example 3: Time Series Line Graph
 
 ```
 data(economics)
@@ -102,8 +98,7 @@ ggplot(economics, aes(x=date, y=uempmed)) +
 
  
 
-Resources
----------
+## Resources
 
 1\. GGPLOT2 Documentation: [https://cran.r\-project.org/web/packages/ggplot2/ggplot2\.pdf](https://cran.r-project.org/web/packages/ggplot2/ggplot2.pdf)  
 2\. GGPLOT2 Tidyverse Reference: [https://ggplot2\.tidyverse.org/reference/](https://ggplot2.tidyverse.org/reference/)  
