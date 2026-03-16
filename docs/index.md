@@ -19,7 +19,6 @@ Install package
 ```
 install.packages("ggplot2")
 library(ggplot2
-
 ```
 
 Example 1: Histogram of the Price of Diamonds
@@ -37,7 +36,6 @@ ggplot(diamonds, aes(price)) +
   theme(plot.title=element_text(size=20, hjust=0.5)) + 
   xlab("Price") + ylab("Count")
 ggsave("histogram1.png")
-
 ```
 ![Histogram of Price of Diamonds]({{ '/assets/images/Example1.png' | relative_url }})
 
@@ -52,13 +50,11 @@ ggplot(diamonds, aes(carat, price, colour=clarity)) +
   geom_point(shape="diamond filled") + 
   theme_light() + 
   ggtitle("Relationship between the Price and the Weight of Diamonds")
-
 ```
 
 ```
 install.packages("colourpicker")
 myscattercolours <- c("#7FFFD4", "#66CDAA", "#458B74", "#00FFFF", "#1C86EE", "#104E8B", "#8B4500", "#FF7F00")
-
 ```
 
 ```
@@ -69,7 +65,6 @@ ggplot(diamonds, aes(carat, price, colour=clarity)) +
   scale_colour_manual(values=myscattercolours) +
   xlab("Carat") + ylab("Price") + 
   guides(colour=guide_legend("Clarity"))
-
 ```
 ![Scatterplot of the Price and the Weight of Diamonds]({{ '/assets/images/Example2.png' | relative_url }})
 
@@ -87,7 +82,6 @@ ggplot(economics, aes(x=date, y=uempmed)) +
        subtitle="Median Unemployment Duration vs Month of Data Collection") +
   xlab("Month of Data Collection") +
   ylab("Median Unemployment Duration in Weeks")
-
 ```
 ![Time Series of Median Unemployment Duration in Weeks]({{ '/assets/images/Example3.png' | relative_url }})
 
