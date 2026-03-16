@@ -30,7 +30,7 @@ ggplot(diamonds, aes(price)) + geom_histogram(binwidth=100) + theme_classic()
 ggplot(diamonds, aes(price)) + 
   geom_histogram(binwidth=100, fill="darkblue", color="lightblue") + 
   theme_classic() + 
-  ggtitle("Histogram of the Diamond Prices") + 
+  ggtitle("Histogram of Diamond Prices") + 
   theme(plot.title=element_text(size=20, hjust=0.5)) + 
   xlab("Price") + ylab("Count")
 ggsave("histogram1.png")
