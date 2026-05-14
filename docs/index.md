@@ -1,7 +1,14 @@
 ---
 title: "Introduction to GGPLOT2"
 layout: "home"
-description: ""
+description: "This guide introduces users to the ggplot2 R package. Ggplot2 is a popular package that is used to make publication quality graphs in R. The official documentation for the ggplot2 package can be found here(https://cran.r-project.org/web/packages/ggplot2/ggplot2.pdf). It includes descriptions of functions and sample datasets."
+staff:
+    - name: Nadia Muhe
+      link: https://library.utoronto.ca/staff/nadia-muhe
+maintainer:
+    - name: Nadia Muhe
+      link: https://library.utoronto.ca/staff/nadia-muhe
+created_date: 2023-07-12
 permalink: "/"  #! Remove this if not the homepage
 ---
 
@@ -17,7 +24,7 @@ Once you have gone over these examples and you feel confident about them, you ca
 
 ```
 install.packages("ggplot2")
-library(ggplot2
+library(ggplot2)
 ```
 
 ## Example 1: Histogram
@@ -106,4 +113,4 @@ ggplot(economics, aes(x=date, y=uempmed)) +
 
  
 
-Technique: [Data Visualization](/technique/data-visualization) \| Tools: [R](/tools/r-0)**Date Created:** 2023\-07\-12**Updated:** 2023\-11\-06
+**Technique:** [Data Visualization](/technique/data-visualization) \| **Tools:** [R](/tools/r-0)
