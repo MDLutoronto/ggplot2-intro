@@ -18,7 +18,7 @@ permalink: "/"  #! Remove this if not the homepage
 
 This guide consists of 3 data visualization examples. You can download the code used in this guide [here](https://maps.library.utoronto.ca/workshops/ggplot2/codeworkshop.php).
 
-Once you have gone over these examples and you feel confident about them, you can test your understanding by trying this [activity](https://maps.library.utoronto.ca/workshops/ggplot2/activity.php). If you have any questions, you can request for assistance by filling out our support request form [here](https://mdl.library.utoronto.ca/about/contact-form).
+Once you have gone over these examples and you feel confident about them, you can test your understanding by trying this [activity](https://maps.library.utoronto.ca/workshops/ggplot2/activity.php). If you have any questions, you can request for assistance by filling out our support request form [here](https://library.utoronto.ca/contact-us/data-maps).
 
 ## Install package
 
